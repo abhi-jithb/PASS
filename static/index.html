@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather UI</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+    .card { background: white; padding: 20px; margin: 10px 0; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    button { padding: 8px 12px; margin-top: 10px; border: none; border-radius: 6px; background: #007bff; color: white; cursor: pointer; }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <h1>🌤 Kollam Weather & Fun Facts</h1>
+
+  <div class="card">
+    <h3>Select City</h3>
+    <select id="citySelect"></select>
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="weatherResult"></div>
+  </div>
+
+  <div class="card">
+    <h3>Kollam Fun Fact</h3>
+    <button onclick="getFunFact()">Get Random Fact</button>
+    <p id="fact"></p>
+  </div>
+
+  <script>
+    const API = "http://127.0.0.1:8000";
+
+    async function loadCities() {
+      let res = await fetch(`${API}/cities`);
+      let data = await res.json();
+      let select = document.getElementById("citySelect");
+      data.cities.forEach(city => {
+        let option = document.createElement("option");
+        option.value = city;
+        option.text = city;
+        select.appendChild(option);
+      });
+    }
+
+    async function getWeather() {
+      let city = document.getElementById("citySelect").value;
+      let res = await fetch(`${API}/weather/${city}`);
+      let data = await res.json();
+      document.getElementById("weatherResult").innerHTML =
+        `<b>${data.city}</b>: ${data.temp}°${data.unit}, 
+         Humidity: ${data.humidity}%, 
+         Condition: ${data.condition}`;
+    }
+
+    async function getFunFact() {
+      let res = await fetch(`${API}/kollam/funfact`);
+      let data = await res.json();
+      document.getElementById("fact").innerText = "👉 " + data.fun_fact;
+    }
+
+    loadCities();
+  </script>
+</body>
+</html>

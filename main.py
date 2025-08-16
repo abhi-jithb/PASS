@@ -1,6 +1,20 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 import random
 
+app = FastAPI()
+
+# Mount static folder so CSS/JS/HTML are served
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+@app.get("/")
+def read_root():
+    # Serve index.html when user visits "/"
+    return FileResponse("static/index.html")
+
+
+# --- your existing code below (weather + funfact) ---
 SUPPORTED_CITIES = ["karunagappally", "kollam", "kochi", "paravur", "punalur", "kottarakkara", "chavara", "ochira", "anchal"]
 
 WEATHER_DATA = {
@@ -30,12 +44,6 @@ KOLLAM_FUN_FACT = [
     "Kollam boat race kandittilla enkil, vallamkali enthanu ennu ariyilla.",
     "Kollam marketil oru round adichal, ellam kittum—except parking space!"
 ]
-
-app = FastAPI()
-
-@app.get("/")
-def root():
-    return {"message": "Welcome to the Weather API"}
 
 @app.get("/cities")
 def home_weather():
@@ -71,9 +79,5 @@ def get_weather_details(city: str):
 
 @app.get("/kollam/funfact")
 def kollam_fun_fact():
-
     fact = random.choice(KOLLAM_FUN_FACT)
-
-    return {
-        "fun_fact": fact
-    }
+    return {"fun_fact": fact}
