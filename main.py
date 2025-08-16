@@ -19,8 +19,16 @@ KOLLAM_FUN_FACT = [
     "We need hot peanuts else porinjadi nadakkum",
     "Biryaniyik opppam salad illlenkil, njangal seen aakuvee",
     "Forget gold or land disputes, here people fight over chips!",
-    "Kollam’s nightlife? It’s like a twilight zone—shops close by 8 PM and the only nightlife you get is dodging stray dogs."
-    "Kollam is that grumpy uncle in your family—tough exterior, but secretly sweet if you know him."
+    "Kollam’s nightlife? It’s like a twilight zone—shops close by 8 PM and the only nightlife you get is dodging stray dogs.",
+    "Kollam is that grumpy uncle in your family—tough exterior, but secretly sweet if you know him.",
+    "Kollathile beach walk kazhinjittu, ice cream kazhikkathe pokilla.",
+    "Kollam railway stationil oru tea adichittilla enkil, ningal Kollamile alla!",
+    "Chavara kayalile sunset kandittilla enkil, ningalude life incomplete aanu.",
+    "Kollam pooram kazhinjittu, earplugs venda—fireworksinte sound kettal mathi!",
+    "Kollam junctionil traffic jam kandittu patience padikkan kazhiyum.",
+    "Kollam’s cashew factories: angane oru smell, angane oru taste!",
+    "Kollam boat race kandittilla enkil, vallamkali enthanu ennu ariyilla.",
+    "Kollam marketil oru round adichal, ellam kittum—except parking space!"
 ]
 
 app = FastAPI()
