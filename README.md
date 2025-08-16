@@ -9,7 +9,7 @@
 # Project Name
 Long Description about project. This project do that. This project is awesome...
 ## Team members
-1. [Abhijitb](https://github.com/ahbi-jithb)
+1. [Abhijitb](https://github.com/abhi-jithb)
 2. [Name 2](https://github.com/TH-Activities/saturday-hack-night-template)
 ## Link to product walkthrough
 [link to video](Link Here)
