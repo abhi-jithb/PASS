@@ -9,8 +9,8 @@
 # Project Name
 Long Description about project. This project do that. This project is awesome...
 ## Team members
-1. [Abhijitb](https://github.com/abhi-jithb)
-2. [Name 2](https://github.com/TH-Activities/saturday-hack-night-template)
+1. [Abhijit B](https://github.com/abhi-jithb)
+2. [Sumayya Sainu](https://github.com/Zumayyahhh)
 ## Link to product walkthrough
 [link to video](Link Here)
 ## How it Works ?
