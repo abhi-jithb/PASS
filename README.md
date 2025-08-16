@@ -6,8 +6,8 @@
 
 
 
-# Project Name
-Long Description about project. This project do that. This project is awesome...
+# Kollam Weather API
+Kollam Weather is little bit weird so find what is in it by using the application! 
 ## Team members
 1. [Abhijit B](https://github.com/abhi-jithb)
 2. [Sumayya Sainu](https://github.com/Zumayyahhh)
